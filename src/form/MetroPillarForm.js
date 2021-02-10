@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { InputLabel, Input, CardContent, Card, Select, MenuItem, Button  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import './BusForm.css';
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -22,26 +21,23 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-const BusForm = () => {
+const MetroPillarForm = () => {
     const classes = useStyles();
-    const [busNumber, setBusNumber] = useState('');
+    const number = ['P11', 'P22', 'P23', 'P43'];
+    const [pillarNumber, setPillarNumber] = useState('');
     
-    const bus = ['M18C', '52K', '21G', '12B'];
-
     return (
         <div className="form">
             <form>
                 <Card className={classes.cardContent}>
                     <CardContent className={classes.content}>
-                        <InputLabel>Bus Number  :  </InputLabel>
+                        <InputLabel>Pillar Number  :  </InputLabel>
                         <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={busNumber}
-                            onChange={e => setBusNumber(e.target.value)}
+                            value={pillarNumber}
+                            onChange={e => setPillarNumber(e.target.value)}
                         >
                             {
-                                bus.map(val => (
+                                number.map(val => (
                                     <MenuItem value={val}>{val}</MenuItem>
                                 ))
                             }
@@ -69,4 +65,4 @@ const BusForm = () => {
     )
 }
 
-export default BusForm;
+export default MetroPillarForm;

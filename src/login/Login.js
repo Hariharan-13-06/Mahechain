@@ -1,17 +1,15 @@
-import React from 'react';
-import { Card, CardContent, TextField, Typography } from '@material-ui/core'; 
+import React from 'react'; 
 import './Login.css';
 
 const Login = () => {
     return (
         <div className="login">
-            <Card className="card">
-                <CardContent className="content">
-                    <Typography className="title">LOGIN</Typography>
-                    <TextField className="text" variant="filled" placeholder="Username" />
-                    <TextField className="text" variant="filled" placeholder="Password" type="password" />
-                </CardContent>
-            </Card>
+            <div className="login_data">
+                <h3>LOGIN</h3>
+                <input className="input" placeholder="Username" type="text" />
+                <input className="input" placeholder="Password" type="password" />
+                <button className="button">Login</button>
+            </div>
         </div>
     )
 }

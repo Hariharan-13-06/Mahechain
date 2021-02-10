@@ -6,9 +6,12 @@ import {
   Link
 } from "react-router-dom";
 import Header from './header/Header';
-import Tender from './tender/Tender';
-import Form from './form/Form';
+import MetroPillarForm from './form/MetroPillarForm';
+import BusForm from './form/BusForm';
+import TrainForm from './form/TrainForm';
+import BusStandForm from './form/BusStandForm';
 import Login from './login/Login';
+import Signup from './signup/Signup';
 import './App.css';
 
 function App() {
@@ -19,27 +22,32 @@ function App() {
 
           <Route path="/busform">
             <Header />
-            <Form name="Bus Number" />
+            <BusForm />
           </Route>
 
           <Route path="/localTrainForm">
             <Header />
-            <Form name="Train Number" />
+            <TrainForm />
           </Route>
 
           <Route path="/metroPillarForm">
             <Header />
-            <Form name="Pillar Number"  />
+            <MetroPillarForm />
           </Route>
 
           <Route path="/busStopForm">
             <Header />
-            <Form name="Bus Stop Name" />
+            <BusStandForm />
           </Route>
 
           <Route path="/login">
             <Header />
             <Login />
+          </Route>
+
+          <Route path="/signup">
+            <Header />
+            <Signup />
           </Route>
 
           <Route path="/">

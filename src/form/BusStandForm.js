@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { InputLabel, Input, CardContent, Card, Select, MenuItem, Button  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import './BusForm.css';
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -22,26 +21,25 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-const BusForm = () => {
+const BusStandForm = ({name}) => {
     const classes = useStyles();
-    const [busNumber, setBusNumber] = useState('');
-    
-    const bus = ['M18C', '52K', '21G', '12B'];
+    const busStandName = ['AAA', 'BBB', 'CCC', 'DDD'];
+    const [busStand, setBusStand] = useState('');
 
     return (
         <div className="form">
             <form>
                 <Card className={classes.cardContent}>
                     <CardContent className={classes.content}>
-                        <InputLabel>Bus Number  :  </InputLabel>
+                        <InputLabel>Bus Stop Name  :  </InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={busNumber}
-                            onChange={e => setBusNumber(e.target.value)}
+                            value={busStand}
+                            onChange={e => setBusStand(e.target.value)}
                         >
                             {
-                                bus.map(val => (
+                                busStandName.map(val => (
                                     <MenuItem value={val}>{val}</MenuItem>
                                 ))
                             }
@@ -69,4 +67,4 @@ const BusForm = () => {
     )
 }
 
-export default BusForm;
+export default BusStandForm;

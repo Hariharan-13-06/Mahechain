@@ -1,9 +1,9 @@
-.login {
-    border-radius: 10px;
+.signup {
     padding: 50px;
+    border-radius: 10px;
 }
 
-.login_data {
+.signup_data {
     padding: 20px;
     margin-left: 450px;
     margin-right: 450px;

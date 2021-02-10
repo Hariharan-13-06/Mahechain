@@ -46,6 +46,10 @@ const Header = () => {
                   <p className="text" color="inherit">Login</p>
                 </Link>
                 
+                <Link className="link" to="/signup">
+                  <p className="text">Signup</p>
+                </Link>
+
               </Toolbar>
             </AppBar>
         </div>
